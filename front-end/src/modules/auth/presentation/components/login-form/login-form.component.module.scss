@@ -1,0 +1,8 @@
+@import '../../../../../shared/styles/variables.scss';
+
+.container {
+    border: 1px solid $primary_color_300;
+    border-radius: 8px;
+    display: flex;
+    width: 30%;
+}
