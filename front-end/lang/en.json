@@ -1,5 +1,8 @@
 {
   "login": {
-    "title": "Login"
+    "title": "Log in"
+  },
+  "page": {
+    "loading_content": "Loading ..."
   }
 }

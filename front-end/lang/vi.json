@@ -1,5 +1,8 @@
 {
   "login": {
     "title": "Đăng nhập"
+  },
+  "page": {
+    "loading_content": "Đang tải ..."
   }
 }
