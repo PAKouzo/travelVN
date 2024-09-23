@@ -1,9 +1,7 @@
-import LoginPage from "@/modules/auth/presentation/pages/login/page"
+import LoginPage from "@/modules/auth/presentation/pages/login/login.page";
 
 const SignInPage = () => {
-    return (
-        <LoginPage />
-    )
-}
+  return <LoginPage />;
+};
 
 export default SignInPage;

@@ -4,5 +4,8 @@
   },
   "page": {
     "loading_content": "Đang tải ..."
+  },
+  "button": {
+    "login": "Đăng nhập" 
   }
 }
