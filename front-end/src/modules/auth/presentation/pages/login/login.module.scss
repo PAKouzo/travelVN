@@ -1,145 +1,180 @@
-@import '../../../../../styles/fonts.scss';
-@import '../../../../../styles/variables.scss';
+@import "../../../../../shared/styles/font.scss";
+@import "../../../../../shared/styles/variables.scss";
 
 .authentication_background {
-  background-color: $color-navi;
-  background-size: 100%;
-  background-position: right;
+  background-image: url('../../../../../public/images/background-auth.svg');
+  background-size: cover;
+  // background-position: right;
   height: 100vh;
   background-repeat: no-repeat;
   position: relative;
 
-  .navbar_wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  @media screen and (max-width: $mobile-width) {
-    background-image: url('/images/authentication-mobile.png');
-    background-size: cover;
-  }
-
   .authentication_container {
-    max-width: $max-width-container;
-    float: right;
+    // max-width: $max-width-container;
+    float: left;
     margin: -50px 150px;
     height: 100%;
-
-    @media screen and (max-width: ($mobile-width - 1px)) {
-      max-width: $mobile-width;
-      margin: 0 30px;
-
-      .authentication_main {
-        justify-content: center;
-      }
-    }
-
-    .authentication_main {
-      padding: $space-ML 0;
-      display: flex;
-      align-items: center;
-      height: 100%;
-    }
   }
-}
 
-.input_group {
-  text-align: start;
-
-  imput {
-    height: 40px;
-    border-radius: 8px;
+  .authentication_main {
+    display: flex;
+    align-items: center;
+    height: 100%;
   }
 }
 
 .form_wrapper {
   border-radius: 8px;
-  background-color: $color-white;
+  background-color: $white-color;
   width: 100%;
   max-width: 560px;
   text-align: center;
-  padding: $space-S $space-M;
   z-index: 1;
+  padding: $space-S $space-M;
 
-  .login_school_logo {
-    transform: scale(0.6);
-  }
-
-  .form_text,
-  .form_subtext {
-    font-size: 14px;
-  }
-
-  .form_subtext {
-    font-weight: 500;
-    color: $color-text-sub-1;
-    opacity: 0.8;
-    line-height: 1.5;
-    padding: 20px 0;
-    max-width: 300px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .form_text {
-    font-weight: 600;
-
-    > a,
-    .highlight {
-      text-decoration: underline;
-      color: $color-navi;
-      cursor: pointer;
-    }
-  }
-
-  .form_text_forgot_password {
-    margin-top: -22px;
-    text-align: right;
-  }
-
-  .btn {
-    border: none;
-    display: block;
-    margin: auto;
-    margin-top: $space-XS;
-    margin-bottom: $space-XS;
-    @extend .font_body_16r;
-    min-width: 170px;
-    height: 40px;
-    color: $color-white;
-    background-color: $color-brand-orange;
-    cursor: pointer;
-    border-radius: 4px;
-    &:hover {
-      color: $color-white;
-    }
-  }
-
-  @media screen and (max-width: ($mobile-width - 1px)) {
-    .btn {
-      min-width: 100px;
-    }
-
-    .form_wrapper {
-      padding: $space-XS $space-S;
-    }
+  .logo {
+    transform: scale(1);
   }
 }
+// .authentication_background {
+//   background-color: $color-navi;
+//   background-size: 100%;
+//   background-position: right;
+//   height: 100vh;
+//   background-repeat: no-repeat;
+//   position: relative;
 
-@media screen and (min-width: ($screen-lg-min + 1px)) {
-  .form_wrapper {
-    max-width: 480px;
-  }
-}
+//   .navbar_wrapper {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//   }
 
-@media screen and (max-width: ($screen-lg-min + 1px)) {
-  .btn {
-    min-width: 100px;
-  }
+//   @media screen and (max-width: $mobile-width) {
+//     background-image: url('/images/authentication-mobile.png');
+//     background-size: cover;
+//   }
 
-  .form_wrapper {
-    max-width: 413px;
-    padding: $space-XS $space-S;
-  }
-}
+//   .authentication_container {
+//     max-width: $max-width-container;
+//     float: right;
+//     margin: -50px 150px;
+//     height: 100%;
+
+//     @media screen and (max-width: ($mobile-width - 1px)) {
+//       max-width: $mobile-width;
+//       margin: 0 30px;
+
+//       .authentication_main {
+//         justify-content: center;
+//       }
+//     }
+
+//     .authentication_main {
+//       padding: $space-ML 0;
+//       display: flex;
+//       align-items: center;
+//       height: 100%;
+//     }
+//   }
+// }
+
+// .input_group {
+//   text-align: start;
+
+//   imput {
+//     height: 40px;
+//     border-radius: 8px;
+//   }
+// }
+
+// .form_wrapper {
+//   border-radius: 8px;
+//   background-color: $color-white;
+//   width: 100%;
+//   max-width: 560px;
+//   text-align: center;
+//   padding: $space-S $space-M;
+//   z-index: 1;
+
+//   .login_school_logo {
+//     transform: scale(0.6);
+//   }
+
+//   .form_text,
+//   .form_subtext {
+//     font-size: 14px;
+//   }
+
+//   .form_subtext {
+//     font-weight: 500;
+//     color: $color-text-sub-1;
+//     opacity: 0.8;
+//     line-height: 1.5;
+//     padding: 20px 0;
+//     max-width: 300px;
+//     width: 100%;
+//     box-sizing: border-box;
+//   }
+
+//   .form_text {
+//     font-weight: 600;
+
+//     > a,
+//     .highlight {
+//       text-decoration: underline;
+//       color: $color-navi;
+//       cursor: pointer;
+//     }
+//   }
+
+//   .form_text_forgot_password {
+//     margin-top: -22px;
+//     text-align: right;
+//   }
+
+//   .btn {
+//     border: none;
+//     display: block;
+//     margin: auto;
+//     margin-top: $space-XS;
+//     margin-bottom: $space-XS;
+//     @extend .font_body_16r;
+//     min-width: 170px;
+//     height: 40px;
+//     color: $color-white;
+//     background-color: $color-brand-orange;
+//     cursor: pointer;
+//     border-radius: 4px;
+//     &:hover {
+//       color: $color-white;
+//     }
+//   }
+
+//   @media screen and (max-width: ($mobile-width - 1px)) {
+//     .btn {
+//       min-width: 100px;
+//     }
+
+//     .form_wrapper {
+//       padding: $space-XS $space-S;
+//     }
+//   }
+// }
+
+// @media screen and (min-width: ($screen-lg-min + 1px)) {
+//   .form_wrapper {
+//     max-width: 480px;
+//   }
+// }
+
+// @media screen and (max-width: ($screen-lg-min + 1px)) {
+//   .btn {
+//     min-width: 100px;
+//   }
+
+//   .form_wrapper {
+//     max-width: 413px;
+//     padding: $space-XS $space-S;
+//   }
+// }

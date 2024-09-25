@@ -51,7 +51,7 @@ const LoginForm = ({ onSubmit, isLoading }: Props) => {
             <InputAntd.Password />
           </Form.Item>
         </div>
-        <p>
+        <p className={(styles.form_text, styles.form_text_forgot_password)}>
           <Link href={RouterPath.SIGNIN}>{t("login.forgot_password")}</Link>
         </p>
         <Form.Item wrapperCol={{ offset: 8, span: 16 }}>

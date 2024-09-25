@@ -1,16 +1,33 @@
-'use client'
+"use client";
 
-import { LoginPayload } from "@/modules/auth/domain/dto/login.dto"
-import LoginForm from "../../components/login-form/login-form.component"
+import { LoginPayload } from "@/modules/auth/domain/dto/login.dto";
+import LoginForm from "../../components/login-form/login-form.component";
+import styles from "./login.module.scss";
+import travelLogo from "../../../../../public/images/logo.svg";
+import Image from "next/image";
 
 const LoginPage = () => {
-    return (
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        <LoginForm onSubmit={function (values: LoginPayload): void {
-            throw new Error("Function not implemented.")
-        } } isLoading={false}/>
-    )
-}
+  return (
+    <div className={styles.authentication_background}>
+      <div className={styles.authentication_container}>
+        <div className={styles.authentication_main}>
+          <div className={styles.form_wrapper}>
+            <div className={styles.logo}>
+              <Image alt="" src={travelLogo} width={150} height={150}/>
+            </div>
+            <LoginForm
+              // eslint-disable-next-line @typescript-eslint/no-unused-vars
+              onSubmit={function (values: LoginPayload): void {
+                throw new Error("Function not implemented.");
+              }}
+              isLoading={false}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default LoginPage;
 
