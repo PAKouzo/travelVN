@@ -3,8 +3,13 @@
     "login": "Login",
     "register": "Sign up"
   },
+
+  "page": {
+    "loading_content": "Loading ..."
+  },
+
   "login": {
-    "title": "Log in",
+    "title": "Already have an account? Login here",
     "email_label": "Email",
     "email_required": "Please input your email!",
     "password_label": "Password",
@@ -13,10 +18,28 @@
     "sub_title": "Don't have an account yet?",
     "here": "here"
   },
-  "page": {
-    "loading_content": "Loading ..."
+
+  "register": {
+    "title": "Don't have an account yet? Register here",
+    "name_label": "Full Name",
+    "name_required": "Please input your full name!",
+    "name_placeholder": "Full name",
+    "phone_label": "Phone number",
+    "phone_required": "Please input your phone number!",
+    "phone_placeholder": "Phone number",
+    "email_label": "Email",
+    "email_required": "Please input your email!",
+    "email_placeholder": "Email",
+    "password_label": "Password",
+    "password_required": "Please input your password!",
+    "password_placeholder": "Password",
+    "sub_title": "Do you already have an account?",
+    "here": "here"
   },
+
   "button": {
-    "login": "Login"
+    "login": "Login",
+    "register": "Sign Up",
+    "next": "Next"
   }
 }

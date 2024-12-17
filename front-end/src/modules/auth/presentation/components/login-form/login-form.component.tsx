@@ -5,6 +5,7 @@ import { Button } from "@/shared/components/button/button.component";
 import { useTranslations } from "next-intl";
 import { RouterPath } from "@/shared/constants/router.const";
 import { Link } from "@/i18n/routing";
+import React from "react";
 
 interface Props {
   onSubmit: (values: LoginPayload) => void;
@@ -18,13 +19,15 @@ const LoginForm = ({ onSubmit, isLoading }: Props) => {
     <>
       <p className={styles.form_subtext}>{t("login.title")}</p>
       <Form
-        name="basic"
-        labelCol={{ span: 8 }}
-        wrapperCol={{ span: 16 }}
-        style={{ maxWidth: 600 }}
+        name="login"
+        // labelCol={{ span: 8 }}
+        // wrapperCol={{ span: 16 }}
+        // style={{ maxWidth: 600 }}
         initialValues={{ remember: true }}
         onFinish={onSubmit}
         disabled={isLoading}
+        layout="vertical"
+        // className={styles.form_container}
       >
         <div className={styles.input_group}>
           <Form.Item
@@ -54,14 +57,13 @@ const LoginForm = ({ onSubmit, isLoading }: Props) => {
         <p className={(styles.form_text, styles.form_text_forgot_password)}>
           <Link href={RouterPath.SIGNIN}>{t("login.forgot_password")}</Link>
         </p>
-        <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-          <Button
-            className={styles.btn}
-            type="primary"
-            htmlType="submit"
-            name={t("button.login")}
-          />
-        </Form.Item>
+        {/* <Form.Item wrapperCol={{ offset: 8, span: 16 }}></Form.Item> */}
+        <Button
+          className={styles.btn}
+          type="primary"
+          htmlType="submit"
+          name={t("button.login")}
+        />
         <p className={styles.form_text}>
           {t("login.sub_title")}{" "}
           <Link href={RouterPath.SIGNUP}>{t("nav.register")}</Link>{" "}

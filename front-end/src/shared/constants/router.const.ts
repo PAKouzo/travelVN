@@ -1,4 +1,6 @@
 export enum RouterPath {
-    SIGNIN = '/auth/signin/',
-    SIGNUP = '/auth/signup/'
+  HOME = "/",
+  SIGNIN = "/auth/signin/",
+  SIGNUP = "/auth/signup/",
+  OTP = "/auth/signup/otp/",
 }

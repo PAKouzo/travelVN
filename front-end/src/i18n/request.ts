@@ -3,8 +3,7 @@ import { routing } from "./routing";
 import { notFound } from "next/navigation";
 
 export default getRequestConfig(async ({ locale }) => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  if (!routing.locales.includes(locale as any)) notFound();
+  if (!routing.locales.includes(locale as never)) notFound();
 
   return {
     messages: (await import(`../../lang/${locale}.json`)).default,

@@ -3,7 +3,7 @@
 import { LoginPayload } from "@/modules/auth/domain/dto/login.dto";
 import LoginForm from "../../components/login-form/login-form.component";
 import styles from "./login.module.scss";
-import travelLogo from "../../../../../public/images/logo.svg";
+import travelLogo from "../../../../../public/images/logo_auth.svg";
 import Image from "next/image";
 
 const LoginPage = () => {
@@ -13,7 +13,7 @@ const LoginPage = () => {
         <div className={styles.authentication_main}>
           <div className={styles.form_wrapper}>
             <div className={styles.logo}>
-              <Image alt="" src={travelLogo} width={150} height={150}/>
+              <Image alt="" src={travelLogo} width={300} height={150}/>
             </div>
             <LoginForm
               // eslint-disable-next-line @typescript-eslint/no-unused-vars

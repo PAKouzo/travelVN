@@ -1,11 +1,22 @@
 {
+  "nav": {
+    "login": "Login",
+    "register": "Sign up"
+  },
   "login": {
-    "title": "Đăng nhập"
+    "title": "Already have an account? Log in here",
+    "email_label": "Email",
+    "email_required": "Please input your email!",
+    "password_label": "Password",
+    "password_required": "Please input your password!",
+    "forgot_password": "Forgot password",
+    "sub_title": "Don't have an account yet?",
+    "here": "here"
   },
   "page": {
-    "loading_content": "Đang tải ..."
+    "loading_content": "Loading ..."
   },
   "button": {
-    "login": "Đăng nhập" 
+    "login": "Login"
   }
 }

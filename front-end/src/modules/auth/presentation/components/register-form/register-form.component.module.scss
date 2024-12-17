@@ -1,0 +1,60 @@
+@import "../../../../../shared/styles/variables.scss";
+@import "../../../../../shared//styles/font.scss";
+
+.form_text,
+.form_subtext {
+  width: 100%;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16.8px;
+  text-align: left;
+}
+
+.input_group {
+  text-align: start;
+  padding: 0 20px;
+  input {
+    border-radius: 8px;
+    width: 100%;
+  }
+}
+
+.form_text {
+  > a,
+  .highlight {
+    text-decoration: underline;
+    color: $color-navi;
+    cursor: pointer;
+  }
+}
+
+.form_subtext {
+  font-weight: 500;
+  color: $color-text-sub;
+  opacity: 0.8;
+  line-height: 1.5;
+  padding-bottom: 40px;
+  max-width: 380px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  align-self: center;
+}
+
+.btn {
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 28px;
+  @extend .font_body_16r;
+  width: 150px;
+  border-radius: 4px;
+}
+
+.form_text_forgot_password {
+  text-align: right;
+  margin-top: -22px;
+  padding: 0 20px;
+}
