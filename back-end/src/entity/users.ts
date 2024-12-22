@@ -26,6 +26,15 @@ class Users {
   @Column({ nullable: true })
   public address: string;
 
+  // @Column({ nullable: true })
+  // public verification_code: string
+
+  @Column({ default: 0 })
+  public flag_active: number
+
+  @Column({ default: 0 })
+  public flag_delete: number
+
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   public createAt: Date;
 }

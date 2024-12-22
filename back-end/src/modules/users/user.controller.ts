@@ -1,13 +1,27 @@
-import { Body, Controller, Post, UseGuards } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Param,
+  Patch,
+  Post,
+  UseGuards,
+} from '@nestjs/common';
 import UserService from './user.service';
-import { RegisterDto } from './dto/register.dto';
+import { UpdateDto } from './dto/update.dto';
 
-@Controller('auth')
+
+@Controller('users')
 export default class UserController {
   constructor(private readonly userService: UserService) {}
 
-  @Post('register')
-  register(@Body() data: RegisterDto) {
-    return this.userService.register(data);
+  @Patch(':id')
+  update(@Param('id') id: number, @Body() data: UpdateDto) {
+    return this.userService.update(id, data);
+  }
+
+  @Delete('id')
+  delete(@Param('id') id: number) {
+    return this.userService.delete(id);
   }
 }

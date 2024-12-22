@@ -8,7 +8,6 @@ declare const module: any;
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const port = app.get(ConfigService).get('PORT');
-
   if (module.hot) {
     module.hot.accept();
     module.hot.dispose(() => app.close());

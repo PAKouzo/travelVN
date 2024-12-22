@@ -8,3 +8,5 @@
 - Điền ngày sinh -> sinh nhật tặng voucher.
 
 - cần address không?
+
+- Check lại whitelist và cách sử dụng?

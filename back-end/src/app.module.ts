@@ -1,8 +1,14 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import * as Joi from '@hapi/joi';
-import { DatabaseModule } from 'src/database/database.module';
-import { UserModule } from './modules/users/user.module';
+import { DatabaseModule } from 'src/database/postgresql/database.module';
+import { Modules } from '@modules/index.module';
+import { MiddlewareModule } from '@common/middleware/middleware.module';
+import { APP_GUARD } from '@nestjs/core';
+import { JwtAuthGuard } from '@common/auth/passport/jwt-auth.guard';
+import { NodeMailerModule } from '@common/email/module/nodemailer.module';
+import { RedisModule } from './database/redis/redis.module';
+import { AuthModule } from '@common/auth/auth.module';
 
 @Module({
   imports: [
@@ -18,9 +24,13 @@ import { UserModule } from './modules/users/user.module';
       }),
     }),
     DatabaseModule,
-    UserModule,
+    MiddlewareModule,
+    Modules,
+    NodeMailerModule,
+    // RedisModule,
+    AuthModule,
   ],
   controllers: [],
-  providers: [],
+  providers: [{ provide: APP_GUARD, useClass: JwtAuthGuard }],
 })
 export class AppModule {}
