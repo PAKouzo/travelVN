@@ -1,7 +1,7 @@
 
 // import { authOptions } from "../../../../../lib/authOptions";
-import { redirect } from "next/navigation";
-import {getServerSession} from "next-auth/next";
+// import { redirect } from "next/navigation";
+// import {getServerSession} from "next-auth/next";
 import AdminCard from "@/modules/admin/presentation/components/cards/admin.card";
 
 const DashboardPage = async () => {

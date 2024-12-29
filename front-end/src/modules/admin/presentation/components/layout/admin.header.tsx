@@ -11,6 +11,7 @@ import { useTranslations } from "next-intl";
 import ConvertLanguage from "@/shared/components/button/convertLanguage";
 import { useAdminContext } from "../hooks/admin.context";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const AdminHeader = (props: any) => {
   const {session} = props;
   console.log("check data: ", session)

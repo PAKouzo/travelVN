@@ -10,10 +10,12 @@ const AdminCard = () => {
     const [products, setProducts] = useState([]);
     const t = useTranslations('ContentDashboard')
     const getAllUser = async () => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const response: any = await axios.get("https://dummyjson.com/users");
         setUsers(response.data.users);
     }
     const getAllProduct = async () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const response: any = await axios.get("https://dummyjson.com/products");
       setProducts(response.data.products);
     };

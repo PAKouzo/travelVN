@@ -5,6 +5,7 @@ import { Button } from "@/shared/components/button/button.component";
 import { useTranslations } from "next-intl";
 import { RouterPath } from "@/shared/constants/router.const";
 import { Link } from "@/i18n/routing";
+import { signIn } from "next-auth/react";
 import React from "react";
 
 interface Props {
@@ -14,7 +15,12 @@ interface Props {
 
 const LoginForm = ({ onSubmit, isLoading }: Props) => {
   const t = useTranslations();
-
+  const Submit = async (values) => {
+    // onSubmit(values);
+    console.log(values);
+    const {email, password} = values;
+    await signIn("credentials", {email, password, redirectTo: RouterPath.HOME});
+  };
   return (
     <>
       <p className={styles.form_subtext}>{t("login.title")}</p>
@@ -24,7 +30,7 @@ const LoginForm = ({ onSubmit, isLoading }: Props) => {
         // wrapperCol={{ span: 16 }}
         // style={{ maxWidth: 600 }}
         initialValues={{ remember: true }}
-        onFinish={onSubmit}
+        onFinish={Submit}
         disabled={isLoading}
         layout="vertical"
         // className={styles.form_container}

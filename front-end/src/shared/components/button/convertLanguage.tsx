@@ -4,6 +4,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { ChangeEvent, useTransition } from "react";
 
 export default function ConvertLanguage() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
   const pathname = usePathname();

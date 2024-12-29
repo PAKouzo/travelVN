@@ -1,4 +1,4 @@
-import createNextIntlPlugin from 'next-intl/plugin' //hàm tạo middleware
+import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin();
 
