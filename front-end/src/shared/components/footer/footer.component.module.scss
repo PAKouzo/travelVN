@@ -1,0 +1,163 @@
+@import "../../styles//font.scss";
+@import "../../styles/variables.scss";
+
+.footer_container {
+  border-top: 1px solid #99a2bc;
+  padding-top: 40px;
+  box-sizing: border-box;
+
+  .footer_main {
+    padding: 30px 0 30px;
+    box-sizing: border-box;
+
+    .footer_wrapper {
+      width: 100%;
+      padding: 0 100px;
+      margin-right: auto;
+      margin-left: auto;
+      box-sizing: border-box;
+
+      .footer_content {
+        .infor_1 {
+          position: relative;
+          width: 100%;
+          padding-right: 10px;
+          padding-left: 10px;
+          box-sizing: border-box;
+          .title {
+            font-size: 16px;
+            margin-bottom: 15px;
+            position: relative;
+            text-transform: uppercase;
+            font-weight: 700;
+            line-height: 1.4;
+            box-sizing: border-box;
+          }
+          .contact_infor {
+            .item {
+              display: flex;
+              flex-direction: column;
+              gap: 7px;
+              font-size: 13px;
+              margin-bottom: 12px;
+              position: relative;
+              box-sizing: border-box;
+            }
+          }
+        }
+
+        .infor_2 {
+          position: relative;
+          width: 100%;
+          padding-right: 10px;
+          padding-left: 10px;
+          box-sizing: border-box;
+          .infor_2_wrapper {
+            .instructions {
+              position: relative;
+              width: 100%;
+              padding-right: 10px;
+              padding-left: 10px;
+              box-sizing: border-box;
+
+              .title {
+                font-size: 16px;
+                margin-bottom: 15px;
+                position: relative;
+                text-transform: uppercase;
+                font-weight: 700;
+              }
+
+              .item_wrapper {
+                .item {
+                  font-size: 13px;
+                  display: block;
+                  padding: 5px 0;
+                  color: #231f20;
+                  text-decoration: none;
+                  background-color: transparent;
+                  box-sizing: border-box;
+                }
+                .item:hover {
+                  color: $primary_color_900;
+                }
+              }
+            }
+            .detail_infor {
+              position: relative;
+              width: 100%;
+              padding-right: 10px;
+              padding-left: 10px;
+              box-sizing: border-box;
+
+              .title {
+                font-size: 16px;
+                margin-bottom: 15px;
+                position: relative;
+                text-transform: uppercase;
+                font-weight: 700;
+              }
+
+              .item_wrapper {
+                .item {
+                  font-size: 13px;
+                  display: block;
+                  padding: 5px 0;
+                  color: #231f20;
+                  text-decoration: none;
+                  background-color: transparent;
+                  box-sizing: border-box;
+                }
+                .item:hover {
+                  color: $primary_color_900;
+                }
+              }
+            }
+            .links {
+              position: relative;
+              width: 100%;
+              padding-right: 10px;
+              padding-left: 10px;
+              box-sizing: border-box;
+
+              .social_media {
+                .title {
+                  font-size: 16px;
+                  margin-bottom: 15px;
+                  position: relative;
+                  text-transform: uppercase;
+                  font-weight: 700;
+                }
+                .item_container {
+                  .item_wrapper {
+                    display: flex;
+                    gap: 20px;
+                  }
+                }
+
+                .pay_method {
+                  .title {
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                    position: relative;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                  }
+                  .item_container {
+                    .item_wrapper {
+                      display: inline-block;
+                      .item {
+                        display: inline-block;
+                        margin-right: 8px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

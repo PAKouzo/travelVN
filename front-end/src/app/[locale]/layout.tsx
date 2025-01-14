@@ -3,6 +3,8 @@ import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import "../../shared/styles/globals.scss";
 import { routing } from "@/i18n/routing";
+import Header from "@/shared/components/header/header.component";
+import Footer from "@/shared/components/footer/footer.component";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,17 +18,19 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }>) {
-  if (!routing.locales.includes(locale as 'en' || 'vi')) {
+  if (!routing.locales.includes((locale as "en") || "vi")) {
     console.log(`Can't find locale: ${locale}`);
   }
-  
+
   const messages = await getMessages();
 
   return (
     <html lang={locale}>
       <body>
         <NextIntlClientProvider messages={messages}>
+          <Header />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

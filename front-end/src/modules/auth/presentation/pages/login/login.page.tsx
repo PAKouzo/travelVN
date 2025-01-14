@@ -3,7 +3,7 @@
 import { LoginPayload } from "@/modules/auth/domain/dto/login.dto";
 import LoginForm from "../../components/login-form/login-form.component";
 import styles from "./login.module.scss";
-import travelLogo from "../../../../../public/images/logo_auth.svg";
+import travelLogo from "@/public/images/logo_auth.svg";
 import Image from "next/image";
 
 const LoginPage = () => {
